@@ -8,4 +8,7 @@ node_js:
     - "11"
 
 before_install:
-    - npm i
+    - npm ci
+
+install:
+    - npm test
