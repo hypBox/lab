@@ -1,3 +1,5 @@
+![Travis Build](https://api.travis-ci.com/hypBox/lab.svg?branch=master&status=passed "Travis Build")
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

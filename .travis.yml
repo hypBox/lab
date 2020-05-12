@@ -1,13 +1,12 @@
-branches:
-    only:
-        - master
-
 language: node_js
 node_js:
-    - "11"
+    - "12"
 
 before_install:
-    - npm ci
+    - echo "Pre-Install Phase!"
 
 install:
+    - npm ci
+
+script:
     - npm test
