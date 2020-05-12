@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.com/hypBox/lab.svg?branch=master)](https://travis-ci.com/hypBox/lab)
+[![Build Status](https://travis-ci.com/hypBox/lab.svg?branch=master)](https://travis-ci.com/hypBox/lab) [![codecov](https://codecov.io/gh/hypBox/lab/branch/master/graph/badge.svg)](https://codecov.io/gh/hypBox/lab)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
