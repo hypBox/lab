@@ -3,7 +3,7 @@
 exports[`App renders as expected 1`] = `
 <div>
   <h1>
-    This is the app!
+    This is the app
   </h1>
 </div>
 `;
