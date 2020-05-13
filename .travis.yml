@@ -1,14 +1,18 @@
 language: node_js
 node_js:
-    - "12"
+  - "12"
+
+branches:
+  only:
+    - master
 
 before_install:
-    - echo "Pre-Install Phase!"
+  - echo "Pre-Install Phase!"
 
 install:
-    - npm ci
-    - npm install -g codecov
+  - npm ci
+  - npm install -g codecov
 
 script:
-    - npm test
-    - npm run test:cov
+  - npm test
+  - npm run test:cov
