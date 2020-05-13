@@ -1,9 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders as expected 1`] = `
-<div>
+Array [
   <h1>
-    This is the app
-  </h1>
-</div>
+    This is header
+  </h1>,
+  <h1>
+    THis is dashboard
+  </h1>,
+]
 `;
