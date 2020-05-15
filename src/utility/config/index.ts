@@ -1,5 +1,5 @@
 import { Constants } from "./../../types"
-import pages from "./pages"
+import pages from "./routes"
 import app from "./app"
 
 const constants: Constants = {

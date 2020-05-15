@@ -1,7 +1,7 @@
 import { Pages } from "../../types"
 import PageNotFound from "../../pages/PageNotFound"
 import MyLab from "../../pages/MyLab"
-import Signin from "../../pages/Signin"
+import Signin from "../../pages/auth/Signin"
 
 const pages: Pages = {
   ROOT: {
