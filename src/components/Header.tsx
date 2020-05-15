@@ -31,7 +31,7 @@ const Header = () => {
   const classes = useStyles()
   const { app: appConfig } = config
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
-  // const open = Boolean(anchorEl)
+  const open = Boolean(anchorEl)
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget)
@@ -57,7 +57,7 @@ const Header = () => {
             {appConfig.title}
           </Typography>
 
-          {/* <div>
+          <div>
             <IconButton
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -67,14 +67,14 @@ const Header = () => {
             >
               <AccountCircle />
             </IconButton>
-             <Menu
+            <Menu
               id="menu-appbar"
               anchorEl={anchorEl}
               anchorOrigin={{
                 vertical: "top",
                 horizontal: "right",
               }}
-              keepMounted
+              // keepMounted
               transformOrigin={{
                 vertical: "top",
                 horizontal: "right",
@@ -85,8 +85,8 @@ const Header = () => {
               <MenuItem onClick={handleClose}>My Lab</MenuItem>
               <MenuItem onClick={handleClose}>Profile</MenuItem>
               <MenuItem onClick={handleClose}>Sign out</MenuItem>
-            </Menu> 
-          </div> */}
+            </Menu>
+          </div>
         </Toolbar>
       </AppBar>
     </div>
