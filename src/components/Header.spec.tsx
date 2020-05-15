@@ -1,10 +1,10 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import PageNotFound from "./PageNotFound"
+import Header from "./Header"
 
-describe("Page Not Found", () => {
+describe("Header", () => {
   it("renders as expected", () => {
-    const tree = renderer.create(<PageNotFound />).toJSON()
+    const tree = renderer.create(<Header />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })
