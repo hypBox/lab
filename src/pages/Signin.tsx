@@ -17,7 +17,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="http://hypbox.com/">
+      <Link color="inherit" target="_blank" href="http://hypbox.com/">
         hypBox.com
       </Link>{" "}
       {new Date().getFullYear()}
