@@ -246,6 +246,7 @@ exports[`Dashboard renders as expected 1`] = `
         href="http://hypbox.com/"
         onBlur={[Function]}
         onFocus={[Function]}
+        target="_blank"
       >
         hypBox.com
       </a>

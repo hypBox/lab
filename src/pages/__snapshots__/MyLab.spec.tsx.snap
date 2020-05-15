@@ -2,6 +2,6 @@
 
 exports[`Dashboard renders as expected 1`] = `
 <h1>
-  THis is dashboard
+  THis is MyLab
 </h1>
 `;

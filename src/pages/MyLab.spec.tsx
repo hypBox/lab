@@ -1,11 +1,11 @@
 import React from "react"
 import renderer from "react-test-renderer"
 
-import Login from "./Login"
+import MyLab from "./MyLab"
 
 describe("Dashboard", () => {
   it("renders as expected", () => {
-    const tree = renderer.create(<Login />).toJSON()
+    const tree = renderer.create(<MyLab />).toJSON()
 
     expect(tree).toMatchSnapshot()
   })
