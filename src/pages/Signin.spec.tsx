@@ -1,11 +1,11 @@
 import React from "react"
 import renderer from "react-test-renderer"
 
-import Login from "./Signin"
+import Signin from "./Signin"
 
-describe("Dashboard", () => {
+describe("Signin", () => {
   it("renders as expected", () => {
-    const tree = renderer.create(<Login />).toJSON()
+    const tree = renderer.create(<Signin />).toJSON()
 
     expect(tree).toMatchSnapshot()
   })

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dashboard renders as expected 1`] = `
+exports[`My Lab renders as expected 1`] = `
 <h1>
   THis is MyLab
 </h1>

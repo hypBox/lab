@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dashboard renders as expected 1`] = `
+exports[`Signin renders as expected 1`] = `
 <main
   className="MuiContainer-root MuiContainer-maxWidthXs"
 >
