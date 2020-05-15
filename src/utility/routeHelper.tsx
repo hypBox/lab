@@ -1,5 +1,5 @@
 import React from "react"
-import constants from "./constants"
+import constants from "./config"
 import { Route } from "react-router-dom"
 
 export const getRoutes = () => {

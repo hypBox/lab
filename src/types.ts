@@ -6,6 +6,9 @@ export interface Page {
   exact?: boolean
   component: ComponentClass | FunctionComponent
 }
+export interface AppConfig {
+  title: string
+}
 
 export interface Pages {
   [index: string]: Page
@@ -17,4 +20,5 @@ export interface Pages {
 
 export interface Constants {
   pages: Pages
+  app: AppConfig
 }
