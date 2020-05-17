@@ -16,9 +16,38 @@ export interface Pages {
   PAGE_NOT_FOUND: Page
   SIGNIN: Page
   MY_LAB: Page
+  BOOTCAMP: Page
 }
 
 export interface Constants {
   pages: Pages
   app: AppConfig
+}
+
+export interface ITask {
+  id: string
+  title: string
+  type: string
+  progress: number | null
+  length?: string
+}
+
+export interface IMilestone {
+  id: string
+  title: string
+  progress: number | null
+  tasks: Array<ITask>
+}
+
+export interface IBootcamp {
+  id: string
+  title: string
+  progress: number | null
+  currentTask: ICurrentTask
+  milestones: Array<IMilestone>
+}
+
+export interface ICurrentTask {
+  moduleId: string
+  taskId: string
 }
