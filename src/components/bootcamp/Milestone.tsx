@@ -5,11 +5,14 @@ import ListItem from "@material-ui/core/ListItem"
 import ListItemIcon from "@material-ui/core/ListItemIcon"
 import ListItemText from "@material-ui/core/ListItemText"
 import Collapse from "@material-ui/core/Collapse"
-
+import {
+  getMilestoneIcon,
+  GetMilestoneIconParams,
+} from "../../utility/bootcamp.utils"
 import Task from "./Task"
 import ExpandLess from "@material-ui/icons/ExpandLess"
 import ExpandMore from "@material-ui/icons/ExpandMore"
-import StarBorder from "@material-ui/icons/StarBorder"
+import { FAIcon } from "../material/icons"
 import { bootcampData } from "../../api"
 import { IMilestone, ITask } from "../../types"
 
@@ -43,13 +46,15 @@ export default function NestedList() {
         <div key={milestone.id}>
           <ListItem button onClick={() => handleMilestoneClick(milestone.id)}>
             <ListItemIcon>
-              <StarBorder />
+              <FAIcon
+                icon={getMilestoneIcon(milestone as GetMilestoneIconParams)}
+              />
             </ListItemIcon>
             <ListItemText primary={milestone.title} />
-            {true ? <ExpandLess /> : <ExpandMore />}
+            {selected === milestone.id ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
           <Collapse in={selected === milestone.id} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
+            <List component="div" disablePadding dense>
               {milestone.tasks.map((task: ITask) => (
                 <Task key={task.id} task={task} />
               ))}

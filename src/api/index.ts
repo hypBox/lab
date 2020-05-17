@@ -7,35 +7,35 @@ export const bootcampData: IBootcamp = {
   currentTask: {
     // this object must have value even if it's the strting point
     // user_id: "my_progress"
-    moduleId: "m1",
-    taskId: "t2",
+    moduleId: "m2",
+    taskId: "t4",
   },
   milestones: [
     {
       id: "m1",
       title: "Overview",
-      progress: 32.4,
+      progress: 100,
       tasks: [
         {
           id: "t1",
           title: "Bootcamp Overview",
           type: "video",
           length: "5m 14s",
-          progress: 32.4,
+          progress: 100,
         },
         {
           id: "t2",
           title: "Course Outline",
           type: "video",
           length: "2m 22s",
-          progress: null,
+          progress: 100,
         },
         {
           id: "t3",
           title: "Project Overview",
           type: "video",
           length: "4m 32s",
-          progress: null,
+          progress: 100,
         },
       ],
     },
@@ -65,7 +65,14 @@ export const bootcampData: IBootcamp = {
           length: "10m",
           progress: null,
         },
-        { id: "t7", title: "Challenge 2", type: "challenge", progress: null },
+        {
+          id: "t7",
+          title: "More Examples",
+          type: "moreexamples",
+          length: "5m 13s",
+          progress: null,
+        },
+        { id: "t8", title: "Challenge 2", type: "challenge", progress: null },
       ],
     },
   ],
