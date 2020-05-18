@@ -3,7 +3,7 @@ import renderer from "react-test-renderer"
 import { render, fireEvent } from "@testing-library/react"
 
 import Bootcamp from "./Bootcamp"
-import ProgressSidebar from "../components/bootcamp/ProgressSidebar"
+import ProgressSidebar from "../components/bootcamp/ProgressSidebar/ProgressSidebar"
 
 describe("Bootcamp", () => {
   it("renders as expected", () => {

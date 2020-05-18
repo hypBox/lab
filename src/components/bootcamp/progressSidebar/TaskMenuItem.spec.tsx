@@ -1,8 +1,8 @@
 import React from "react"
 import renderer from "react-test-renderer"
 
-import Task from "./Task"
-import { TaskProps } from "./Task"
+import TaskMenuItem from "./TaskMenuItem"
+import { TaskProps } from "./TaskMenuItem"
 
 describe("Task Component", () => {
   it("renders as expected", () => {
@@ -20,7 +20,7 @@ describe("Task Component", () => {
       task,
     }
 
-    const tree = renderer.create(<Task {...taskProps} />).toJSON()
+    const tree = renderer.create(<TaskMenuItem {...taskProps} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

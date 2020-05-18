@@ -1,15 +1,3 @@
-//export { Menu } from // Search,
-// AccountCircle,
-// Mail,
-// Notifications,
-// MoreVert,
-// ChevronLeft,
-// ChevronRight,
-// Inbox,
-// Check,
-// PlayCircleOutline,
-//"@material-ui/icons"
-
 export { FontAwesomeIcon as FAIcon } from "@fortawesome/react-fontawesome"
 
 export {
@@ -23,4 +11,6 @@ export {
   faLayerGroup as Milestone,
   faLock as Lock,
   faRocket as Rocket,
+  faChevronDown as ChevronDown,
+  faChevronUp as ChevronUp,
 } from "@fortawesome/free-solid-svg-icons"

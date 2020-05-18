@@ -1,15 +1,15 @@
 import React, { FunctionComponent } from "react"
-import { createStyles, makeStyles } from "../material/styles"
+import { createStyles, makeStyles } from "../../material/styles"
 import {
   ListItem,
   ListItemText,
   ListItemIcon,
   ListItemSecondaryAction,
   Typography,
-} from "../material/core"
-import { FAIcon } from "../material/icons"
-import { ITask } from "../../types"
-import { getTaskIcon, GetTaskIconParams } from "../../utility/bootcamp.utils"
+} from "../../material/core"
+import { FAIcon } from "../../material/icons"
+import { ITask } from "../../../types"
+import { getTaskIcon, GetTaskIconParams } from "../../../utility/bootcamp.utils"
 
 export interface TaskProps {
   task: ITask

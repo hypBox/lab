@@ -19,5 +19,6 @@ export {
   Box,
   CircularProgress,
   Fab,
+  Collapse,
   ListItemSecondaryAction,
 } from "@material-ui/core"
