@@ -6,7 +6,7 @@ import {
   Milestone,
   Rocket,
   Check,
-} from "../components/material/icons"
+} from "../../material/icons"
 
 export interface GetMilestoneIconParams {
   progress: number
