@@ -60,6 +60,7 @@ const Bootcamp = () => {
 
       {showingPrgbar && (
         <Grid
+          data-testid="progress-sidebar"
           item
           xs={12}
           sm={4}
