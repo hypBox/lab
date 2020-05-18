@@ -5,6 +5,7 @@ import { makeStyles } from "../components/material/styles"
 import ProgressSidebar from "../components/bootcamp/progressSidebar"
 import { bootcampData } from "../api"
 import { ITask, IMilestone } from "../types"
+import Task from "../components/bootcamp/task"
 
 const useStyles = makeStyles((theme) => ({
   main: {},
@@ -57,6 +58,7 @@ const Bootcamp = () => {
   return (
     <Grid container className={classes.main} direction="row">
       <Grid {...size} item className={classes.content}>
+        <Task task={selectedTask} />
         <Button variant="contained" onClick={clickHandler} color="primary">
           {getText()}
         </Button>

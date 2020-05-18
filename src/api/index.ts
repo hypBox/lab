@@ -20,7 +20,8 @@ export const bootcampData: IBootcamp = {
           id: "t1",
           title: "Bootcamp Overview",
           type: "video",
-          length: "5m 14s",
+          url: "https://www.youtube.com/watch?v=gAprO6lGizM",
+          length: "1m 25s",
           progress: 100,
         },
         {
