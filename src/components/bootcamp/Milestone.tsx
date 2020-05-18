@@ -23,7 +23,13 @@ export interface MilestoneProps {
 }
 
 export default function Milestone(props: MilestoneProps) {
-  const { milestone, onMilestoneClick, onTaskClick, selectedMilestone } = props
+  const {
+    milestone,
+    onMilestoneClick,
+    onTaskClick,
+    selectedMilestone,
+    selectedTask,
+  } = props
 
   return (
     <>
@@ -47,7 +53,12 @@ export default function Milestone(props: MilestoneProps) {
       >
         <List component="div" disablePadding dense>
           {milestone.tasks.map((task: ITask) => (
-            <Task key={task.id} task={task} onclick={onTaskClick} />
+            <Task
+              key={task.id}
+              task={task}
+              onclick={onTaskClick}
+              selectedTask={selectedTask}
+            />
           ))}
         </List>
       </Collapse>

@@ -40,6 +40,7 @@ const ProgressSidebar: React.FunctionComponent<ProgressSidebarProps> = ({
     >
       {milestones.map((milestone: IMilestone) => (
         <Milestone
+          key={milestone.id}
           milestone={milestone}
           onMilestoneClick={onMilestoneClick}
           onTaskClick={onTaskClick}
