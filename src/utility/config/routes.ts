@@ -1,7 +1,8 @@
 import { Pages } from "../../types"
 import PageNotFound from "../../pages/PageNotFound"
 import MyLab from "../../pages/MyLab"
-import Signin from "../../pages/Signin"
+import Bootcamp from "../../pages/Bootcamp"
+import Signin from "../../pages/auth/Signin"
 
 const pages: Pages = {
   ROOT: {
@@ -19,6 +20,11 @@ const pages: Pages = {
     title: "My Lab",
     path: "/mylab",
     component: MyLab,
+  },
+  BOOTCAMP: {
+    title: "Bootcamp",
+    path: "/bootcamp",
+    component: Bootcamp,
   },
   PAGE_NOT_FOUND: {
     title: "OPSS!!!",

@@ -9,7 +9,7 @@ import {
 } from "./material/core"
 import config from "../utility/config"
 
-import { AccountCircle, Menu as MenuIcon } from "./material/icons"
+import { User, Menu as MenuIcon, FAIcon } from "./material/icons"
 
 import { makeStyles, createStyles } from "./material/styles"
 
@@ -51,7 +51,7 @@ const Header = () => {
             color="inherit"
             aria-label="menu"
           >
-            <MenuIcon />
+            <FAIcon icon={MenuIcon} />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             {appConfig.title}
@@ -65,7 +65,7 @@ const Header = () => {
               onClick={handleMenu}
               color="inherit"
             >
-              <AccountCircle />
+              <FAIcon icon={User} />
             </IconButton>
             <Menu
               id="menu-appbar"
