@@ -22,8 +22,8 @@ const Bootcamp = () => {
   const [showingPrgbar, setShowingPrgbar] = useState(true)
   const getSize = (isShowing: boolean): any =>
     isShowing
-      ? { xs: 12, sm: 8, md: 9, lg: 10, xl: 11 }
-      : { xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }
+      ? { xs: 12, sm: 8, md: 9, lg: 10 }
+      : { xs: 12, sm: 12, md: 12, lg: 12 }
   const [size, setSize] = useState(getSize(showingPrgbar))
 
   const [selectedTask, setTask] = useState<ITask>(
@@ -56,36 +56,36 @@ const Bootcamp = () => {
   }
 
   return (
-    <Grid container className={classes.main} direction="row">
-      <Grid {...size} item className={classes.content}>
-        <Task task={selectedTask} />
-        <Button variant="contained" onClick={clickHandler} color="primary">
-          {getText()}
-        </Button>
-        {selectedMilestone.title} >> {selectedTask.title}
-      </Grid>
-
-      {showingPrgbar && (
-        <Grid
-          data-testid="progress-sidebar"
-          item
-          xs={12}
-          sm={4}
-          md={3}
-          lg={2}
-          xl={1}
-          className={classes.progress}
-        >
-          <ProgressSidebar
-            onMilestoneClick={milestoneClickHandler}
-            onTaskClick={taskClickHandler}
-            selectedMilestone={selectedMilestone}
-            selectedTask={selectedTask}
-            bootcamp={bootcampData}
-          />
+    <div className="container">
+      <Grid container className={classes.main} direction="row">
+        <Grid {...size} item className={classes.content}>
+          <Task task={selectedTask} />
+          <Button variant="contained" onClick={clickHandler} color="primary">
+            {getText()}
+          </Button>
         </Grid>
-      )}
-    </Grid>
+
+        {showingPrgbar && (
+          <Grid
+            data-testid="progress-sidebar"
+            item
+            xs={12}
+            sm={4}
+            md={3}
+            lg={2}
+            className={classes.progress}
+          >
+            <ProgressSidebar
+              onMilestoneClick={milestoneClickHandler}
+              onTaskClick={taskClickHandler}
+              selectedMilestone={selectedMilestone}
+              selectedTask={selectedTask}
+              bootcamp={bootcampData}
+            />
+          </Grid>
+        )}
+      </Grid>
+    </div>
   )
 }
 

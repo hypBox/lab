@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react"
 import { ITask } from "../../../types"
 
-import VideoTask from "./VideoTask"
+import VideoTask from "./videoTask"
 
 export interface TaskProps {
   task: ITask
