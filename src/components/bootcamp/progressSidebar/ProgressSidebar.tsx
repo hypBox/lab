@@ -1,7 +1,7 @@
 import React from "react"
-import { createStyles, makeStyles } from "../material/styles"
-import { List } from "../material/core"
-import { IMilestone, IBootcamp, ITask } from "../../types"
+import { createStyles, makeStyles } from "../../material/styles"
+import { List } from "../../material/core"
+import { IMilestone, IBootcamp, ITask } from "../../../types"
 import Milestone from "./Milestone"
 
 const useStyles = makeStyles((theme) =>

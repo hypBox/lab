@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 
 import { Grid, Button } from "../components/material/core"
 import { makeStyles } from "../components/material/styles"
-import ProgressSidebar from "../components/bootcamp/ProgressSidebar"
+import ProgressSidebar from "../components/bootcamp/progressSidebar"
 import { bootcampData } from "../api"
 import { ITask, IMilestone } from "../types"
 
@@ -24,6 +24,7 @@ const Bootcamp = () => {
       ? { xs: 12, sm: 8, md: 9, lg: 10, xl: 11 }
       : { xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }
   const [size, setSize] = useState(getSize(showingPrgbar))
+
   const [selectedTask, setTask] = useState<ITask>(
     bootcampData.milestones[0].tasks[0]
   )
@@ -38,6 +39,10 @@ const Bootcamp = () => {
   const taskClickHandler = (task: ITask) => {
     setTask(task)
   }
+
+  useEffect(() => {
+    console.log("selectedTask", selectedTask) // handle change
+  }, [selectedTask])
 
   useEffect(() => {
     setSize(getSize(showingPrgbar))

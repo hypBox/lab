@@ -1,10 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProgressSidbar renders as expected 1`] = `
-<nav
-  aria-labelledby="nested-list-subheader"
-  className="MuiList-root makeStyles-root-1 MuiList-padding"
->
+exports[`Milestone renders as expected 1`] = `
+Array [
   <div
     aria-disabled={false}
     className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
@@ -54,16 +51,23 @@ exports[`ProgressSidbar renders as expected 1`] = `
       </span>
     </div>
     <svg
-      aria-hidden={true}
-      className="MuiSvgIcon-root"
+      aria-hidden="true"
+      className="svg-inline--fa fa-chevron-down fa-w-14 "
+      data-icon="chevron-down"
+      data-prefix="fas"
       focusable="false"
-      viewBox="0 0 24 24"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 448 512"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+        fill="currentColor"
+        style={Object {}}
       />
     </svg>
-  </div>
+  </div>,
   <div
     className="MuiCollapse-container MuiCollapse-entered"
     style={
@@ -86,7 +90,7 @@ exports[`ProgressSidbar renders as expected 1`] = `
           >
             <div
               aria-disabled={false}
-              className="MuiButtonBase-root MuiListItem-root makeStyles-nested-72 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction Mui-selected"
+              className="MuiButtonBase-root MuiListItem-root makeStyles-nested-62 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction Mui-selected"
               onBlur={[Function]}
               onClick={[Function]}
               onDragLeave={[Function]}
@@ -146,6 +150,6 @@ exports[`ProgressSidbar renders as expected 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</nav>
+  </div>,
+]
 `;

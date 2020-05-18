@@ -1,18 +1,20 @@
 import React from "react"
-import List from "@material-ui/core/List"
-import ListItem from "@material-ui/core/ListItem"
-import ListItemIcon from "@material-ui/core/ListItemIcon"
-import ListItemText from "@material-ui/core/ListItemText"
-import Collapse from "@material-ui/core/Collapse"
+import {
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Collapse,
+} from "../../material/core"
+
+import TaskMenuItem from "./TaskMenuItem"
+
+import { FAIcon, ChevronUp, ChevronDown } from "../../material/icons"
+import { IMilestone, ITask } from "../../../types"
 import {
   getMilestoneIcon,
   GetMilestoneIconParams,
-} from "../../utility/bootcamp.utils"
-import Task from "./Task"
-import ExpandLess from "@material-ui/icons/ExpandLess"
-import ExpandMore from "@material-ui/icons/ExpandMore"
-import { FAIcon } from "../material/icons"
-import { IMilestone, ITask } from "../../types"
+} from "../../../utility/bootcamp.utils"
 
 export interface MilestoneProps {
   milestone: IMilestone
@@ -40,11 +42,9 @@ export default function Milestone(props: MilestoneProps) {
           />
         </ListItemIcon>
         <ListItemText primary={milestone.title} />
-        {selectedMilestone.id === milestone.id ? (
-          <ExpandLess />
-        ) : (
-          <ExpandMore />
-        )}
+        <FAIcon
+          icon={selectedMilestone.id === milestone.id ? ChevronDown : ChevronUp}
+        />
       </ListItem>
       <Collapse
         in={selectedMilestone.id === milestone.id}
@@ -53,7 +53,7 @@ export default function Milestone(props: MilestoneProps) {
       >
         <List component="div" disablePadding dense>
           {milestone.tasks.map((task: ITask) => (
-            <Task
+            <TaskMenuItem
               key={task.id}
               task={task}
               onclick={onTaskClick}
