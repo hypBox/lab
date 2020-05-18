@@ -13,6 +13,7 @@ import { getTaskIcon, GetTaskIconParams } from "../../utility/bootcamp.utils"
 
 export interface TaskProps {
   task: ITask
+  onclick: CallableFunction
 }
 
 const useStyles = makeStyles((theme) =>
@@ -23,11 +24,15 @@ const useStyles = makeStyles((theme) =>
   })
 )
 
-const Task: FunctionComponent<TaskProps> = ({ task }) => {
+const Task: FunctionComponent<TaskProps> = ({ task, onclick }) => {
   const classes = useStyles()
-
   return (
-    <ListItem button key={task.id} className={classes.nested}>
+    <ListItem
+      button
+      key={task.id}
+      className={classes.nested}
+      onClick={() => onclick(task)}
+    >
       <ListItemIcon>
         <FAIcon icon={getTaskIcon(task as GetTaskIconParams)} />
       </ListItemIcon>

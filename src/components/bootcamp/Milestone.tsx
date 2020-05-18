@@ -1,5 +1,4 @@
 import React from "react"
-import { makeStyles, Theme, createStyles } from "@material-ui/core/styles"
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemIcon from "@material-ui/core/ListItemIcon"
@@ -13,55 +12,45 @@ import Task from "./Task"
 import ExpandLess from "@material-ui/icons/ExpandLess"
 import ExpandMore from "@material-ui/icons/ExpandMore"
 import { FAIcon } from "../material/icons"
-import { bootcampData } from "../../api"
 import { IMilestone, ITask } from "../../types"
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      width: "100%",
-      maxWidth: "100%",
-      backgroundColor: theme.palette.background.paper,
-    },
-  })
-)
+export interface MilestoneProps {
+  milestone: IMilestone
+  onMilestoneClick: CallableFunction
+  onTaskClick: CallableFunction
+  selectedTask: ITask
+  selectedMilestone: IMilestone
+}
 
-export default function NestedList() {
-  const classes = useStyles()
-  const [selected, select] = React.useState<string>(
-    bootcampData.currentTask.moduleId
-  )
-
-  const handleMilestoneClick = (milestoneId: string) => {
-    select(milestoneId)
-  }
+export default function Milestone(props: MilestoneProps) {
+  const { milestone, onMilestoneClick, onTaskClick, selectedMilestone } = props
 
   return (
-    <List
-      component="nav"
-      aria-labelledby="nested-list-subheader"
-      className={classes.root}
-    >
-      {bootcampData.milestones.map((milestone: IMilestone) => (
-        <div key={milestone.id}>
-          <ListItem button onClick={() => handleMilestoneClick(milestone.id)}>
-            <ListItemIcon>
-              <FAIcon
-                icon={getMilestoneIcon(milestone as GetMilestoneIconParams)}
-              />
-            </ListItemIcon>
-            <ListItemText primary={milestone.title} />
-            {selected === milestone.id ? <ExpandLess /> : <ExpandMore />}
-          </ListItem>
-          <Collapse in={selected === milestone.id} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding dense>
-              {milestone.tasks.map((task: ITask) => (
-                <Task key={task.id} task={task} />
-              ))}
-            </List>
-          </Collapse>
-        </div>
-      ))}
-    </List>
+    <>
+      <ListItem button onClick={() => onMilestoneClick(milestone)}>
+        <ListItemIcon>
+          <FAIcon
+            icon={getMilestoneIcon(milestone as GetMilestoneIconParams)}
+          />
+        </ListItemIcon>
+        <ListItemText primary={milestone.title} />
+        {selectedMilestone.id === milestone.id ? (
+          <ExpandLess />
+        ) : (
+          <ExpandMore />
+        )}
+      </ListItem>
+      <Collapse
+        in={selectedMilestone.id === milestone.id}
+        timeout="auto"
+        unmountOnExit
+      >
+        <List component="div" disablePadding dense>
+          {milestone.tasks.map((task: ITask) => (
+            <Task key={task.id} task={task} onclick={onTaskClick} />
+          ))}
+        </List>
+      </Collapse>
+    </>
   )
 }
