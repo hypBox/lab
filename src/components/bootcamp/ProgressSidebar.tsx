@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { createStyles, makeStyles } from "../material/styles"
 import { List } from "../material/core"
 import { IMilestone, IBootcamp, ITask } from "../../types"

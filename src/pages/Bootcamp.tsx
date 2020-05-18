@@ -18,12 +18,12 @@ const useStyles = makeStyles((theme) => ({
 
 const Bootcamp = () => {
   const classes = useStyles()
-  const [showing, setShowing] = useState(true)
+  const [showingPrgbar, setShowingPrgbar] = useState(true)
   const getSize = (isShowing: boolean): any =>
     isShowing
       ? { xs: 12, sm: 8, md: 9, lg: 10, xl: 11 }
       : { xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }
-  const [size, setSize] = useState(getSize(showing))
+  const [size, setSize] = useState(getSize(showingPrgbar))
   const [selectedTask, setTask] = useState<ITask>(
     bootcampData.milestones[0].tasks[0]
   )
@@ -40,14 +40,13 @@ const Bootcamp = () => {
   }
 
   useEffect(() => {
-    setSize(getSize(showing))
-  }, [showing])
+    setSize(getSize(showingPrgbar))
+  }, [showingPrgbar])
 
-  const getText = () => (showing ? "Hide" : "Show")
+  const getText = () => (showingPrgbar ? "Hide" : "Show")
 
-  const clickHandler = (item: any) => {
-    // setShowing(!showing)
-    console.log("item", item)
+  const clickHandler = () => {
+    setShowingPrgbar(!showingPrgbar)
   }
 
   return (
@@ -59,7 +58,7 @@ const Bootcamp = () => {
         {selectedMilestone.title} >> {selectedTask.title}
       </Grid>
 
-      {showing && (
+      {showingPrgbar && (
         <Grid
           item
           xs={12}
