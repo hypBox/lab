@@ -13,4 +13,7 @@ export {
   faRocket as Rocket,
   faChevronDown as ChevronDown,
   faChevronUp as ChevronUp,
+  faBars as Bars,
+  faMoon as Moon,
+  faSun as Sun,
 } from "@fortawesome/free-solid-svg-icons"

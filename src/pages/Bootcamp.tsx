@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react"
 
-import { Grid, Button } from "../components/material/core"
+import { Grid } from "../components/material/core"
 import { makeStyles } from "../components/material/styles"
 import ProgressSidebar from "../components/bootcamp/progressSidebar"
 import { bootcampData } from "../api"
 import { ITask, IMilestone } from "../types"
 import Task from "../components/bootcamp/task"
-
+import BootcampHeader from "../components/bootcamp/BootcampHeader"
 const useStyles = makeStyles((theme) => ({
   main: {},
   content: {
@@ -24,6 +24,10 @@ const Bootcamp = () => {
       : { xs: 12, sm: 12, md: 12, lg: 12 }
   const [size, setSize] = useState(getSize(showingPrgbar))
 
+  useEffect(() => {
+    setSize(getSize(showingPrgbar))
+  }, [showingPrgbar])
+
   const [selectedTask, setTask] = useState<ITask>(
     bootcampData.milestones[0].tasks[0]
   )
@@ -39,28 +43,16 @@ const Bootcamp = () => {
     setTask(task)
   }
 
-  useEffect(() => {
-    console.log("selectedTask", selectedTask) // handle change
-  }, [selectedTask])
-
-  useEffect(() => {
-    setSize(getSize(showingPrgbar))
-  }, [showingPrgbar])
-
-  const getText = () => (showingPrgbar ? "Hide" : "Show")
-
   const clickHandler = () => {
     setShowingPrgbar(!showingPrgbar)
   }
 
   return (
-    <div className="container">
+    <>
       <Grid container className={classes.main} direction="row">
         <Grid {...size} item className={classes.content}>
+          <BootcampHeader onButtonClick={clickHandler} task={selectedTask} />
           <Task task={selectedTask} />
-          <Button variant="contained" onClick={clickHandler} color="primary">
-            {getText()}
-          </Button>
         </Grid>
 
         {showingPrgbar && (
@@ -82,7 +74,7 @@ const Bootcamp = () => {
           </Grid>
         )}
       </Grid>
-    </div>
+    </>
   )
 }
 
