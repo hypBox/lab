@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Task Component renders as expected 1`] = `
+<div
+  className="makeStyles-playerWrapper-1"
+>
+  <div
+    className="react-player"
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;

@@ -2,7 +2,7 @@ import React from "react"
 import renderer from "react-test-renderer"
 
 import TaskMenuItem from "./TaskMenuItem"
-import { TaskProps } from "./TaskMenuItem"
+import { TaskMenuItemProps } from "./TaskMenuItem"
 
 describe("Task Component", () => {
   it("renders as expected", () => {
@@ -14,7 +14,7 @@ describe("Task Component", () => {
       length: "LENGTH",
     }
 
-    const taskProps: TaskProps = {
+    const taskProps: TaskMenuItemProps = {
       onclick: jest.fn(),
       selectedTask: task,
       task,

@@ -11,10 +11,7 @@ import TaskMenuItem from "./TaskMenuItem"
 
 import { FAIcon, ChevronUp, ChevronDown } from "../../material/icons"
 import { IMilestone, ITask } from "../../../types"
-import {
-  getMilestoneIcon,
-  GetMilestoneIconParams,
-} from "../../../utility/bootcamp.utils"
+import { getMilestoneIcon, GetMilestoneIconParams } from "./utility"
 
 export interface MilestoneProps {
   milestone: IMilestone

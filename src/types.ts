@@ -32,11 +32,15 @@ export interface ITask {
   length?: string
 }
 
+export interface IVideoTask extends ITask {
+  url: string
+}
+
 export interface IMilestone {
   id: string
   title: string
   progress: number | null
-  tasks: Array<ITask>
+  tasks: Array<ITask | IVideoTask>
 }
 
 export interface IBootcamp {
@@ -48,6 +52,6 @@ export interface IBootcamp {
 }
 
 export interface ICurrentTask {
-  moduleId: string
+  milestoneId: string
   taskId: string
 }

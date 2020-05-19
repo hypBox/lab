@@ -5,43 +5,122 @@ exports[`Bootcamp renders as expected 1`] = `
   className="MuiGrid-root makeStyles-main-1 MuiGrid-container"
 >
   <div
-    className="MuiGrid-root makeStyles-content-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-8 MuiGrid-grid-md-9 MuiGrid-grid-lg-10 MuiGrid-grid-xl-11"
+    className="MuiGrid-root makeStyles-content-2 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-8 MuiGrid-grid-md-9 MuiGrid-grid-lg-10"
   >
-    <button
-      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onDragLeave={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex={0}
-      type="button"
+    <header
+      className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
     >
-      <span
-        className="MuiButton-label"
+      <div
+        className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
       >
-        Hide
-      </span>
-    </button>
-    Overview
-     &gt;&gt; 
-    Bootcamp Overview
+        <h6
+          className="MuiTypography-root makeStyles-title-106 MuiTypography-h6"
+        >
+          Bootcamp Overview
+        </h6>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-colorInherit"
+          disabled={false}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-moon fa-w-16 fa-lg "
+              data-icon="moon"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </span>
+        </button>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-colorInherit"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="toggle-progress-sidebar"
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-bars fa-w-14 fa-lg "
+              data-icon="bars"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </header>
+    <div
+      className="makeStyles-playerWrapper-212"
+    >
+      <div
+        className="react-player"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
   </div>
   <div
-    className="MuiGrid-root makeStyles-progress-2 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2 MuiGrid-grid-xl-1"
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2"
     data-testid="progress-sidebar"
   >
     <nav
       aria-labelledby="nested-list-subheader"
-      className="MuiList-root makeStyles-root-139 MuiList-padding"
+      className="MuiList-root makeStyles-root-214 MuiList-padding"
     >
       <div
         aria-disabled={false}
@@ -131,7 +210,7 @@ exports[`Bootcamp renders as expected 1`] = `
               >
                 <div
                   aria-disabled={false}
-                  className="MuiButtonBase-root MuiListItem-root makeStyles-nested-198 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction Mui-selected"
+                  className="MuiButtonBase-root MuiListItem-root makeStyles-nested-243 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction Mui-selected"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onDragLeave={[Function]}
@@ -184,7 +263,7 @@ exports[`Bootcamp renders as expected 1`] = `
                   <span
                     className="MuiTypography-root MuiTypography-caption"
                   >
-                    5m 14s
+                    1m 24s
                   </span>
                 </div>
               </li>
@@ -193,7 +272,7 @@ exports[`Bootcamp renders as expected 1`] = `
               >
                 <div
                   aria-disabled={false}
-                  className="MuiButtonBase-root MuiListItem-root makeStyles-nested-198 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction"
+                  className="MuiButtonBase-root MuiListItem-root makeStyles-nested-243 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onDragLeave={[Function]}
@@ -255,7 +334,7 @@ exports[`Bootcamp renders as expected 1`] = `
               >
                 <div
                   aria-disabled={false}
-                  className="MuiButtonBase-root MuiListItem-root makeStyles-nested-198 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction"
+                  className="MuiButtonBase-root MuiListItem-root makeStyles-nested-243 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onDragLeave={[Function]}

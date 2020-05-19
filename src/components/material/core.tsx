@@ -21,4 +21,6 @@ export {
   Fab,
   Collapse,
   ListItemSecondaryAction,
+  MuiThemeProvider,
+  createMuiTheme,
 } from "@material-ui/core"

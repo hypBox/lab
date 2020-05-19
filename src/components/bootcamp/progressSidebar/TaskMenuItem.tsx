@@ -9,9 +9,9 @@ import {
 } from "../../material/core"
 import { FAIcon } from "../../material/icons"
 import { ITask } from "../../../types"
-import { getTaskIcon, GetTaskIconParams } from "../../../utility/bootcamp.utils"
+import { getTaskIcon, GetTaskIconParams } from "./utility"
 
-export interface TaskProps {
+export interface TaskMenuItemProps {
   task: ITask
   onclick: CallableFunction
   selectedTask: ITask
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) =>
   })
 )
 
-const Task: FunctionComponent<TaskProps> = ({
+const Task: FunctionComponent<TaskMenuItemProps> = ({
   task,
   onclick,
   selectedTask,

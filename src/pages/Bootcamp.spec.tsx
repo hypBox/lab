@@ -18,8 +18,8 @@ describe("Bootcamp", () => {
   })
 
   it("hides progressSidebar", async (done) => {
-    const { getByText, queryByTestId } = render(<Bootcamp />)
-    const button = getByText("Hide")
+    const { queryByTestId, getByRole } = render(<Bootcamp />)
+    const button = getByRole("toggle-progress-sidebar")
     fireEvent.click(button)
     const progressSidebar = await queryByTestId("progress-sidebar")
     expect(progressSidebar).toBeFalsy()
