@@ -28,6 +28,7 @@ export const bootcampData: IBootcamp = {
           id: "t2",
           title: "Course Outline",
           type: "video",
+          url: "https://content.jwplatform.com/videos/xooIFqEg-w2lSLc5z.mp4",
           length: "2m 22s",
           progress: 100,
         },

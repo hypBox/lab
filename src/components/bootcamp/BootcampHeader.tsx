@@ -31,7 +31,11 @@ const BootcampHeader: FunctionComponent<BootcampHeaderProps> = ({
         <Button color="inherit">
           <FAIcon size={"lg"} icon={Moon} />
         </Button>
-        <Button color="inherit" onClick={() => onButtonClick()}>
+        <Button
+          role="toggle-progress-sidebar"
+          color="inherit"
+          onClick={() => onButtonClick()}
+        >
           <FAIcon size={"lg"} icon={Bars} />
         </Button>
       </Toolbar>
