@@ -52,6 +52,6 @@ export interface IBootcamp {
 }
 
 export interface ICurrentTask {
-  moduleId: string
+  milestoneId: string
   taskId: string
 }

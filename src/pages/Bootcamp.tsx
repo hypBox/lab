@@ -9,11 +9,9 @@ import Task from "../components/bootcamp/task"
 
 const useStyles = makeStyles((theme) => ({
   main: {},
-  progress: {
-    backgroundColor: "green",
-  },
   content: {
     backgroundColor: "yellow",
+    height: "100vh",
   },
 }))
 
@@ -73,7 +71,6 @@ const Bootcamp = () => {
             sm={4}
             md={3}
             lg={2}
-            className={classes.progress}
           >
             <ProgressSidebar
               onMilestoneClick={milestoneClickHandler}

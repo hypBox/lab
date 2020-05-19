@@ -7,8 +7,8 @@ export const bootcampData: IBootcamp = {
   currentTask: {
     // this object must have value even if it's the strting point
     // user_id: "my_progress"
-    moduleId: "m2",
-    taskId: "t4",
+    milestoneId: "m1",
+    taskId: "t1",
   },
   milestones: [
     {
@@ -21,7 +21,7 @@ export const bootcampData: IBootcamp = {
           title: "Bootcamp Overview",
           type: "video",
           url: "https://www.youtube.com/watch?v=gAprO6lGizM",
-          length: "1m 25s",
+          length: "1m 24s",
           progress: 100,
         },
         {
