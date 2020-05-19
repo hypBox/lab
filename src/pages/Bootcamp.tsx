@@ -10,8 +10,8 @@ import BootcampHeader from "../components/bootcamp/BootcampHeader"
 const useStyles = makeStyles((theme) => ({
   main: {},
   content: {
-    backgroundColor: "yellow",
-    height: "100vh",
+    // backgroundColor: "yellow",
+    height: "calc(100vh - 68px)",
   },
 }))
 

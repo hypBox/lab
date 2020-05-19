@@ -23,7 +23,7 @@ describe("ProgressSidbar", () => {
     title: "Python For Beginners",
     progress: 12.4,
     currentTask: {
-      moduleId: "m2",
+      milestoneId: "m2",
       taskId: "t4",
     },
     milestones: [milestone],
