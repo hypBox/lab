@@ -10,7 +10,7 @@ const useStyels = makeStyles(() =>
   createStyles({
     playerWrapper: {
       position: "relative",
-      height: "calc(100% - 68px)",
+      height: "calc(100% - 68px)", // 68 is the height of the appBar
     },
     "react-player": {
       position: "absolute",
