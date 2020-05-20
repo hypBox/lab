@@ -32,7 +32,7 @@ export interface ITask {
   title: string
   type: string
   progress: number | null
-  length?: string
+  length: string
 }
 
 export interface IVideoTask extends ITask {
