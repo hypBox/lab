@@ -53,7 +53,7 @@ export default function Milestone(props: MilestoneProps) {
         />
         <FAIcon
           className={classes.milestoneIcon}
-          icon={selectedMilestone.id === milestone.id ? ChevronDown : ChevronUp}
+          icon={selectedMilestone.id === milestone.id ? ChevronUp : ChevronDown}
         />
       </ListItem>
       <Collapse
