@@ -38,8 +38,12 @@ export default function Milestone(props: MilestoneProps) {
             icon={getMilestoneIcon(milestone as GetMilestoneIconParams)}
           />
         </ListItemIcon>
-        <ListItemText primary={milestone.title} />
+        <ListItemText
+          primary={milestone.title}
+          primaryTypographyProps={{ variant: "body1", color: "textPrimary" }}
+        />
         <FAIcon
+          color="error"
           icon={selectedMilestone.id === milestone.id ? ChevronDown : ChevronUp}
         />
       </ListItem>

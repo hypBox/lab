@@ -44,10 +44,15 @@ const Task: FunctionComponent<TaskMenuItemProps> = ({
       </ListItemIcon>
       <ListItemText
         primary={task.title}
-        primaryTypographyProps={{ variant: "body2" }}
+        primaryTypographyProps={{
+          variant: "body2",
+          color: "textPrimary",
+        }}
       />
       <ListItemSecondaryAction>
-        <Typography variant={"caption"}>{task.length}</Typography>
+        <Typography color="textPrimary" variant={"caption"}>
+          {task.length}
+        </Typography>
       </ListItemSecondaryAction>
     </ListItem>
   )

@@ -8,6 +8,9 @@ export interface Page {
 }
 export interface AppConfig {
   title: string
+  video: {
+    completedPercentage: number
+  }
 }
 
 export interface Pages {
