@@ -4,10 +4,13 @@ import { makeStyles, createStyles } from "../material/styles"
 import { FAIcon, Bars, Moon } from "../material/icons"
 import { ITask } from "../../types"
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme) =>
   createStyles({
     title: {
       flexGrow: 1,
+    },
+    appBar: {
+      backgroundColor: "#212121",
     },
   })
 )
@@ -23,7 +26,7 @@ const BootcampHeader: FunctionComponent<BootcampHeaderProps> = ({
 }) => {
   const classes = useStyles()
   return (
-    <AppBar position="static">
+    <AppBar position="static" className={classes.appBar}>
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
           {task.title}

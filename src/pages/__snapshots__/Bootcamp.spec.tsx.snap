@@ -5,7 +5,7 @@ exports[`Bootcamp renders as expected 1`] = `
   className="MuiGrid-root makeStyles-main-1 MuiGrid-container"
 >
   <div
-    className="MuiGrid-root makeStyles-content-2 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-8 MuiGrid-grid-md-9 MuiGrid-grid-lg-10"
+    className="MuiGrid-root makeStyles-content-2 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-8 MuiGrid-grid-md-9"
   >
     <header
       className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
@@ -115,7 +115,7 @@ exports[`Bootcamp renders as expected 1`] = `
     </div>
   </div>
   <div
-    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2"
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3"
     data-testid="progress-sidebar"
   >
     <nav
@@ -165,7 +165,7 @@ exports[`Bootcamp renders as expected 1`] = `
           className="MuiListItemText-root"
         >
           <span
-            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayBlock"
           >
             Overview
           </span>
@@ -173,6 +173,7 @@ exports[`Bootcamp renders as expected 1`] = `
         <svg
           aria-hidden="true"
           className="svg-inline--fa fa-chevron-down fa-w-14 "
+          color="error"
           data-icon="chevron-down"
           data-prefix="fas"
           focusable="false"
@@ -251,7 +252,7 @@ exports[`Bootcamp renders as expected 1`] = `
                     className="MuiListItemText-root MuiListItemText-dense"
                   >
                     <span
-                      className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                      className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayBlock"
                     >
                       Bootcamp Overview
                     </span>
@@ -261,7 +262,7 @@ exports[`Bootcamp renders as expected 1`] = `
                   className="MuiListItemSecondaryAction-root"
                 >
                   <span
-                    className="MuiTypography-root MuiTypography-caption"
+                    className="MuiTypography-root MuiTypography-caption MuiTypography-colorTextPrimary"
                   >
                     1m 24s
                   </span>
@@ -313,7 +314,7 @@ exports[`Bootcamp renders as expected 1`] = `
                     className="MuiListItemText-root MuiListItemText-dense"
                   >
                     <span
-                      className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                      className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayBlock"
                     >
                       Course Outline
                     </span>
@@ -323,7 +324,7 @@ exports[`Bootcamp renders as expected 1`] = `
                   className="MuiListItemSecondaryAction-root"
                 >
                   <span
-                    className="MuiTypography-root MuiTypography-caption"
+                    className="MuiTypography-root MuiTypography-caption MuiTypography-colorTextPrimary"
                   >
                     2m 22s
                   </span>
@@ -375,7 +376,7 @@ exports[`Bootcamp renders as expected 1`] = `
                     className="MuiListItemText-root MuiListItemText-dense"
                   >
                     <span
-                      className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                      className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayBlock"
                     >
                       Project Overview
                     </span>
@@ -385,7 +386,7 @@ exports[`Bootcamp renders as expected 1`] = `
                   className="MuiListItemSecondaryAction-root"
                 >
                   <span
-                    className="MuiTypography-root MuiTypography-caption"
+                    className="MuiTypography-root MuiTypography-caption MuiTypography-colorTextPrimary"
                   >
                     4m 32s
                   </span>
@@ -438,7 +439,7 @@ exports[`Bootcamp renders as expected 1`] = `
           className="MuiListItemText-root"
         >
           <span
-            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+            className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayBlock"
           >
             Variables and Types
           </span>
@@ -446,6 +447,7 @@ exports[`Bootcamp renders as expected 1`] = `
         <svg
           aria-hidden="true"
           className="svg-inline--fa fa-chevron-up fa-w-14 "
+          color="error"
           data-icon="chevron-up"
           data-prefix="fas"
           focusable="false"

@@ -45,7 +45,7 @@ Array [
       className="MuiListItemText-root"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayBlock"
       >
         Overview
       </span>
@@ -53,6 +53,7 @@ Array [
     <svg
       aria-hidden="true"
       className="svg-inline--fa fa-chevron-down fa-w-14 "
+      color="error"
       data-icon="chevron-down"
       data-prefix="fas"
       focusable="false"
@@ -131,7 +132,7 @@ Array [
                 className="MuiListItemText-root MuiListItemText-dense"
               >
                 <span
-                  className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                  className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayBlock"
                 >
                   Bootcamp Overview
                 </span>
@@ -141,7 +142,7 @@ Array [
               className="MuiListItemSecondaryAction-root"
             >
               <span
-                className="MuiTypography-root MuiTypography-caption"
+                className="MuiTypography-root MuiTypography-caption MuiTypography-colorTextPrimary"
               >
                 5m 14s
               </span>

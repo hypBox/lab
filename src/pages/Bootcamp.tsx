@@ -8,10 +8,11 @@ import { ITask, IMilestone } from "../types"
 import Task from "../components/bootcamp/task"
 import BootcampHeader from "../components/bootcamp/BootcampHeader"
 const useStyles = makeStyles((theme) => ({
-  main: {},
+  main: {
+    backgroundColor: theme.palette.background.default,
+  },
   content: {
-    // backgroundColor: "yellow",
-    height: "calc(100vh - 68px)",
+    height: "100vh",
   },
 }))
 
@@ -19,7 +20,9 @@ const Bootcamp = () => {
   const classes = useStyles()
   const [showingPrgbar, setShowingPrgbar] = useState(true)
   const getSize = (isShowing: boolean): any =>
-    isShowing ? { xs: 12, sm: 8, md: 9 } : { xs: 12, sm: 12, md: 12 }
+    isShowing
+      ? { xs: 12, sm: 8, md: 9, lg: 10 }
+      : { xs: 12, sm: 12, md: 12, lg: 12 }
   const [size, setSize] = useState(getSize(showingPrgbar))
 
   useEffect(() => {
@@ -54,7 +57,14 @@ const Bootcamp = () => {
         </Grid>
 
         {showingPrgbar && (
-          <Grid data-testid="progress-sidebar" item xs={12} sm={4} md={3}>
+          <Grid
+            data-testid="progress-sidebar"
+            item
+            xs={12}
+            sm={4}
+            md={3}
+            lg={2}
+          >
             <ProgressSidebar
               onMilestoneClick={milestoneClickHandler}
               onTaskClick={taskClickHandler}

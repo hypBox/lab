@@ -47,7 +47,7 @@ exports[`Task Component renders as expected 1`] = `
       className="MuiListItemText-root"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayBlock"
       >
         TASK 1
       </span>
@@ -57,7 +57,7 @@ exports[`Task Component renders as expected 1`] = `
     className="MuiListItemSecondaryAction-root"
   >
     <span
-      className="MuiTypography-root MuiTypography-caption"
+      className="MuiTypography-root MuiTypography-caption MuiTypography-colorTextPrimary"
     >
       LENGTH
     </span>

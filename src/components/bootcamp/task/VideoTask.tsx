@@ -10,7 +10,7 @@ const useStyels = makeStyles(() =>
   createStyles({
     playerWrapper: {
       position: "relative",
-      height: "100%",
+      height: "calc(100% - 68px)",
     },
     "react-player": {
       position: "absolute",
