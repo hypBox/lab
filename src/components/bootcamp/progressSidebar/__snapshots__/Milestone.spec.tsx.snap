@@ -52,8 +52,7 @@ Array [
     </div>
     <svg
       aria-hidden="true"
-      className="svg-inline--fa fa-chevron-down fa-w-14 "
-      color="error"
+      className="svg-inline--fa fa-chevron-down fa-w-14 makeStyles-milestoneIcon-1"
       data-icon="chevron-down"
       data-prefix="fas"
       focusable="false"
@@ -91,7 +90,7 @@ Array [
           >
             <div
               aria-disabled={false}
-              className="MuiButtonBase-root MuiListItem-root makeStyles-nested-62 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction Mui-selected"
+              className="MuiButtonBase-root MuiListItem-root makeStyles-nested-63 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction Mui-selected"
               onBlur={[Function]}
               onClick={[Function]}
               onDragLeave={[Function]}
