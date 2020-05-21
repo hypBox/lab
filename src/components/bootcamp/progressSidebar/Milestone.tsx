@@ -6,12 +6,20 @@ import {
   ListItemText,
   Collapse,
 } from "../../material/core"
+import { createStyles, makeStyles } from "../../material/styles"
 
 import TaskMenuItem from "./TaskMenuItem"
-
 import { FAIcon, ChevronUp, ChevronDown } from "../../material/icons"
 import { IMilestone, ITask } from "../../../types"
 import { getMilestoneIcon, GetMilestoneIconParams } from "./utility"
+
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    milestoneIcon: {
+      color: theme.palette.text.primary,
+    },
+  })
+)
 
 export interface MilestoneProps {
   milestone: IMilestone
@@ -22,6 +30,7 @@ export interface MilestoneProps {
 }
 
 export default function Milestone(props: MilestoneProps) {
+  const classes = useStyles()
   const {
     milestone,
     onMilestoneClick,
@@ -38,9 +47,13 @@ export default function Milestone(props: MilestoneProps) {
             icon={getMilestoneIcon(milestone as GetMilestoneIconParams)}
           />
         </ListItemIcon>
-        <ListItemText primary={milestone.title} />
+        <ListItemText
+          primary={milestone.title}
+          primaryTypographyProps={{ variant: "body1", color: "textPrimary" }}
+        />
         <FAIcon
-          icon={selectedMilestone.id === milestone.id ? ChevronDown : ChevronUp}
+          className={classes.milestoneIcon}
+          icon={selectedMilestone.id === milestone.id ? ChevronUp : ChevronDown}
         />
       </ListItem>
       <Collapse

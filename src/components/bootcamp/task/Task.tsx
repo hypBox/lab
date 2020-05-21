@@ -7,6 +7,10 @@ export interface TaskProps {
   task: ITask | IVideoTask
 }
 
+const taskCompletedHandler = (task: any) => {
+  console.log("completed", task)
+}
+
 const getTaskComponent = (task: ITask) => {
   const { type } = task
   const types: any = {
@@ -17,7 +21,7 @@ const getTaskComponent = (task: ITask) => {
 
 const Task: FunctionComponent<TaskProps> = ({ task }) => {
   const TaskComponent = getTaskComponent(task)
-  return <TaskComponent task={task} />
+  return <TaskComponent onCompleted={taskCompletedHandler} task={task} />
 }
 
 export default Task

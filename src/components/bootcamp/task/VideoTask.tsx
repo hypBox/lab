@@ -1,14 +1,16 @@
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent, useState } from "react"
 import { IVideoTask } from "../../../types"
 import ReactPlayer from "react-player"
 
 import { createStyles, makeStyles } from "../../material/styles"
 
+import config from "../../../utility/config"
+
 const useStyels = makeStyles(() =>
   createStyles({
     playerWrapper: {
       position: "relative",
-      height: "100%",
+      height: "calc(100% - 68px)", // 68 is the height of the appBar
     },
     "react-player": {
       position: "absolute",
@@ -20,11 +22,31 @@ const useStyels = makeStyles(() =>
 
 export interface VideoTaskProps {
   task: IVideoTask
-  onProgress?: CallableFunction
+  onCompleted: CallableFunction
 }
 
-const VideoTask: FunctionComponent<VideoTaskProps> = ({ task, onProgress }) => {
+const VideoTask: FunctionComponent<VideoTaskProps> = ({
+  task,
+  onCompleted,
+}) => {
   const classes = useStyels()
+  const [completed, setCompleted] = useState(false)
+  const progressHandler = (state: {
+    played: number
+    playedSeconds: number
+    loaded: number
+    loadedSeconds: number
+  }) => {
+    const {
+      app: {
+        video: { completedPercentage },
+      },
+    } = config
+    if (state.played > completedPercentage && !completed) {
+      setCompleted(true)
+      onCompleted(task)
+    }
+  }
 
   return (
     <div className={classes.playerWrapper}>
@@ -34,9 +56,7 @@ const VideoTask: FunctionComponent<VideoTaskProps> = ({ task, onProgress }) => {
         controls={true}
         width="100%"
         height="100%"
-        onProgress={({ played }) => {
-          onProgress && onProgress(played)
-        }}
+        onProgress={progressHandler}
       />
     </div>
   )

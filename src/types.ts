@@ -8,6 +8,9 @@ export interface Page {
 }
 export interface AppConfig {
   title: string
+  video: {
+    completedPercentage: number
+  }
 }
 
 export interface Pages {
@@ -29,7 +32,7 @@ export interface ITask {
   title: string
   type: string
   progress: number | null
-  length?: string
+  length: string
 }
 
 export interface IVideoTask extends ITask {

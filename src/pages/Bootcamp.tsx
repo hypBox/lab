@@ -8,10 +8,11 @@ import { ITask, IMilestone } from "../types"
 import Task from "../components/bootcamp/task"
 import BootcampHeader from "../components/bootcamp/BootcampHeader"
 const useStyles = makeStyles((theme) => ({
-  main: {},
+  main: {
+    backgroundColor: theme.palette.background.default,
+  },
   content: {
-    // backgroundColor: "yellow",
-    height: "calc(100vh - 68px)",
+    height: "100vh",
   },
 }))
 
