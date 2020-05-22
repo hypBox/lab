@@ -4,6 +4,8 @@ import { AppBar, Button, Typography, Toolbar } from "../material/core"
 import { makeStyles, createStyles } from "../material/styles"
 import { FAIcon, Bars, Moon } from "../material/icons"
 import { ITask } from "../../types"
+import { connect } from "react-redux"
+import { updateTheme } from "../../redux/actions/themeActions"
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -22,11 +24,15 @@ const useStyles = makeStyles((theme) =>
 export interface BootcampHeaderProps {
   task: ITask
   onButtonClick: CallableFunction
+  theme: boolean
+  toggleTheme: CallableFunction
 }
 
 const BootcampHeader: FunctionComponent<BootcampHeaderProps> = ({
   task,
   onButtonClick,
+  theme,
+  toggleTheme,
 }) => {
   const classes = useStyles()
   return (
@@ -34,7 +40,7 @@ const BootcampHeader: FunctionComponent<BootcampHeaderProps> = ({
       <Toolbar>
         <Logo className={classes.logo} />
         <Typography variant="h6" className={classes.title}>
-          {task.title}
+          {task.title} dark:{theme.toString()}
         </Typography>
         <Button color="inherit">
           <FAIcon size={"lg"} icon={Moon} />
@@ -42,7 +48,10 @@ const BootcampHeader: FunctionComponent<BootcampHeaderProps> = ({
         <Button
           role="toggle-progress-sidebar"
           color="inherit"
-          onClick={() => onButtonClick()}
+          // onClick={() => onButtonClick()}
+          onClick={() => {
+            toggleTheme(false)
+          }}
         >
           <FAIcon size={"lg"} icon={Bars} />
         </Button>
@@ -51,4 +60,16 @@ const BootcampHeader: FunctionComponent<BootcampHeaderProps> = ({
   )
 }
 
-export default BootcampHeader
+const mapStateToProps = (state: any) => {
+  console.log("state", state)
+  return {
+    theme: state.theme,
+  }
+}
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    toggleTheme: (dark: any) => dispatch(updateTheme(dark)),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BootcampHeader)
