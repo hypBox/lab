@@ -19,16 +19,7 @@ exports[`Bootcamp renders as expected 1`] = `
           <img
             alt="hypBox - Personalized e-Learning"
             className="MuiAvatar-img"
-            sizes={
-              Object {
-                "process": [Function],
-              }
-            }
-            src={
-              Object {
-                "process": [Function],
-              }
-            }
+            src="undefined/static/images/logo.png"
             title="hypBox - Personalized e-Learning"
           />
         </div>
