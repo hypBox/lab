@@ -8,6 +8,7 @@ export interface Page {
 }
 export interface AppConfig {
   title: string
+  slogan: string
   video: {
     completedPercentage: number
   }

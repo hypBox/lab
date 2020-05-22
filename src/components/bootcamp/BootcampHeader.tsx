@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react"
+import Logo from "../Logo"
 import { AppBar, Button, Typography, Toolbar } from "../material/core"
 import { makeStyles, createStyles } from "../material/styles"
 import { FAIcon, Bars, Moon } from "../material/icons"
@@ -11,6 +12,9 @@ const useStyles = makeStyles((theme) =>
     },
     appBar: {
       backgroundColor: "#212121",
+    },
+    logo: {
+      marginRight: "10px",
     },
   })
 )
@@ -28,6 +32,7 @@ const BootcampHeader: FunctionComponent<BootcampHeaderProps> = ({
   return (
     <AppBar position="static" className={classes.appBar}>
       <Toolbar>
+        <Logo className={classes.logo} />
         <Typography variant="h6" className={classes.title}>
           {task.title}
         </Typography>

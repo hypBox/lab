@@ -23,4 +23,5 @@ export {
   ListItemSecondaryAction,
   MuiThemeProvider,
   createMuiTheme,
+  Avatar,
 } from "@material-ui/core"

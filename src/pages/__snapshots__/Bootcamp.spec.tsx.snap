@@ -13,6 +13,16 @@ exports[`Bootcamp renders as expected 1`] = `
       <div
         className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
       >
+        <div
+          className="MuiAvatar-root MuiAvatar-square makeStyles-logo-108"
+        >
+          <img
+            alt="hypBox - Personalized e-Learning"
+            className="MuiAvatar-img"
+            src="undefined/static/images/logo.png"
+            title="hypBox - Personalized e-Learning"
+          />
+        </div>
         <h6
           className="MuiTypography-root makeStyles-title-106 MuiTypography-h6"
         >
@@ -101,7 +111,7 @@ exports[`Bootcamp renders as expected 1`] = `
       </div>
     </header>
     <div
-      className="makeStyles-playerWrapper-213"
+      className="makeStyles-playerWrapper-221"
     >
       <div
         className="react-player"
@@ -120,7 +130,7 @@ exports[`Bootcamp renders as expected 1`] = `
   >
     <nav
       aria-labelledby="nested-list-subheader"
-      className="MuiList-root makeStyles-root-215 MuiList-padding"
+      className="MuiList-root makeStyles-root-223 MuiList-padding"
     >
       <div
         aria-disabled={false}
@@ -172,7 +182,7 @@ exports[`Bootcamp renders as expected 1`] = `
         </div>
         <svg
           aria-hidden="true"
-          className="svg-inline--fa fa-chevron-up fa-w-14 makeStyles-milestoneIcon-220"
+          className="svg-inline--fa fa-chevron-up fa-w-14 makeStyles-milestoneIcon-228"
           data-icon="chevron-up"
           data-prefix="fas"
           focusable="false"
@@ -210,7 +220,7 @@ exports[`Bootcamp renders as expected 1`] = `
               >
                 <div
                   aria-disabled={false}
-                  className="MuiButtonBase-root MuiListItem-root makeStyles-nested-245 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction Mui-selected"
+                  className="MuiButtonBase-root MuiListItem-root makeStyles-nested-253 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction Mui-selected"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onDragLeave={[Function]}
@@ -272,7 +282,7 @@ exports[`Bootcamp renders as expected 1`] = `
               >
                 <div
                   aria-disabled={false}
-                  className="MuiButtonBase-root MuiListItem-root makeStyles-nested-245 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction"
+                  className="MuiButtonBase-root MuiListItem-root makeStyles-nested-253 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onDragLeave={[Function]}
@@ -334,7 +344,7 @@ exports[`Bootcamp renders as expected 1`] = `
               >
                 <div
                   aria-disabled={false}
-                  className="MuiButtonBase-root MuiListItem-root makeStyles-nested-245 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction"
+                  className="MuiButtonBase-root MuiListItem-root makeStyles-nested-253 MuiListItem-dense MuiListItem-gutters MuiListItem-button MuiListItem-secondaryAction"
                   onBlur={[Function]}
                   onClick={[Function]}
                   onDragLeave={[Function]}
@@ -445,7 +455,7 @@ exports[`Bootcamp renders as expected 1`] = `
         </div>
         <svg
           aria-hidden="true"
-          className="svg-inline--fa fa-chevron-down fa-w-14 makeStyles-milestoneIcon-220"
+          className="svg-inline--fa fa-chevron-down fa-w-14 makeStyles-milestoneIcon-228"
           data-icon="chevron-down"
           data-prefix="fas"
           focusable="false"
