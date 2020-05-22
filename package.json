@@ -38,23 +38,24 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react": "^9.5.0",
-    "prettier": "2.0.5",
-    "ts-jest": "^25.5.1",
     "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.1.2",
-    "husky": "^4.2.5",
-    "jest": "^24.9.0",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-router-dom": "^5.1.5",
     "@types/react-test-renderer": "^16.9.2",
+    "husky": "^4.2.5",
+    "jest": "^24.9.0",
+    "prettier": "2.0.5",
+    "pretty-quick": "^2.0.1",
+    "prop-types": "^15.7.2",
     "react-scripts": "3.4.1",
     "react-test-renderer": "^16.13.1",
-    "typescript": "~3.7.2",
-    "pretty-quick": "^2.0.1"
+    "ts-jest": "^25.5.1",
+    "typescript": "~3.7.2"
   },
   "husky": {
     "hooks": {
