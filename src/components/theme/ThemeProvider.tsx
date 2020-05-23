@@ -3,7 +3,6 @@ import { MuiThemeProvider, createMuiTheme } from "../material/core"
 import { connect, ConnectedProps } from "react-redux"
 import hypTheme from "./hypBoxTheme"
 import { AppState } from "../../redux/configStore"
-import theme from "./hypBoxTheme"
 
 const mapState = (state: AppState) => {
   const {
