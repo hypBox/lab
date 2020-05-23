@@ -1,11 +1,12 @@
-import React, { FunctionComponent } from "react"
+import React, { FC } from "react"
 import Logo from "../Logo"
 import { AppBar, Button, Typography, Toolbar } from "../material/core"
 import { makeStyles, createStyles } from "../material/styles"
-import { FAIcon, Bars, Moon } from "../material/icons"
+import { FAIcon, Bars, Moon, Sun } from "../material/icons"
 import { ITask } from "../../types"
-import { connect } from "react-redux"
-import { updateTheme } from "../../redux/actions/themeActions"
+import { connect, ConnectedProps } from "react-redux"
+import { toggleDarkMode } from "../../redux/actions/preferencesActions"
+import { AppState } from "../../redux/configStore"
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -13,7 +14,7 @@ const useStyles = makeStyles((theme) =>
       flexGrow: 1,
     },
     appBar: {
-      backgroundColor: "#212121",
+      backgroundColor: theme.palette.background.default,
     },
     logo: {
       marginRight: "10px",
@@ -24,34 +25,52 @@ const useStyles = makeStyles((theme) =>
 export interface BootcampHeaderProps {
   task: ITask
   onButtonClick: CallableFunction
-  theme: boolean
-  toggleTheme: CallableFunction
 }
 
-const BootcampHeader: FunctionComponent<BootcampHeaderProps> = ({
+const mapState = (state: AppState) => {
+  const {
+    preferences: { darkMode },
+  } = state
+  return {
+    darkMode,
+  }
+}
+const mapDispatch = (dispatch: any) => {
+  return {
+    toggleDarkMode: () => dispatch(toggleDarkMode()),
+  }
+}
+
+const connector = connect(mapState, mapDispatch)
+type PropsFromRedux = ConnectedProps<typeof connector>
+type Props = BootcampHeaderProps & PropsFromRedux
+
+const BootcampHeader: FC<Props> = ({
   task,
   onButtonClick,
-  theme,
-  toggleTheme,
+  darkMode,
+  toggleDarkMode,
 }) => {
   const classes = useStyles()
   return (
     <AppBar position="static" className={classes.appBar}>
       <Toolbar>
         <Logo className={classes.logo} />
-        <Typography variant="h6" className={classes.title}>
-          {task.title} dark:{theme.toString()}
+        <Typography variant="h6" color="textPrimary" className={classes.title}>
+          {task.title}
         </Typography>
-        <Button color="inherit">
-          <FAIcon size={"lg"} icon={Moon} />
+        <Button
+          color="default"
+          onClick={() => {
+            toggleDarkMode()
+          }}
+        >
+          <FAIcon size={"lg"} icon={darkMode ? Sun : Moon} />
         </Button>
         <Button
           role="toggle-progress-sidebar"
-          color="inherit"
-          // onClick={() => onButtonClick()}
-          onClick={() => {
-            toggleTheme(false)
-          }}
+          color="default"
+          onClick={() => onButtonClick()}
         >
           <FAIcon size={"lg"} icon={Bars} />
         </Button>
@@ -60,16 +79,4 @@ const BootcampHeader: FunctionComponent<BootcampHeaderProps> = ({
   )
 }
 
-const mapStateToProps = (state: any) => {
-  console.log("state", state)
-  return {
-    theme: state.theme,
-  }
-}
-const mapDispatchToProps = (dispatch: any) => {
-  return {
-    toggleTheme: (dark: any) => dispatch(updateTheme(dark)),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(BootcampHeader)
+export default connector(BootcampHeader)

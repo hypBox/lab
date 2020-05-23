@@ -1,20 +1,19 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import App from "./App"
-import { MuiThemeProvider } from "./components/material/core"
-import theme from "./components/material/theme"
 import * as serviceWorker from "./serviceWorker"
 import configStore from "./redux/configStore"
 import { Provider as ReduxProvider } from "react-redux"
+import ThemeProvider from "./components/theme/ThemeProvider"
 
-const store = configStore({ theme: true })
+const store = configStore()
 
 ReactDOM.render(
   <React.StrictMode>
     <ReduxProvider store={store}>
-      <MuiThemeProvider theme={theme}>
+      <ThemeProvider>
         <App />
-      </MuiThemeProvider>
+      </ThemeProvider>
     </ReduxProvider>
   </React.StrictMode>,
   document.getElementById("root")

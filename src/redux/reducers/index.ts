@@ -1,8 +1,9 @@
 import { combineReducers } from "redux"
-import themeReducer from "./themeReducer"
+import preferencesReducer from "./preferencesReducer"
 
 const rootReducer = combineReducers({
-  theme: themeReducer,
+  preferences: preferencesReducer,
 })
 
+export type RootState = ReturnType<typeof rootReducer>
 export default rootReducer
