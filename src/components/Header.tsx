@@ -7,7 +7,7 @@ import {
   MenuItem,
   Menu,
 } from "./material/core"
-import config from "../utility/config"
+import config from "../config"
 
 import { User, Menu as MenuIcon, FAIcon } from "./material/icons"
 

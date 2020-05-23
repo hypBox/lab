@@ -1,8 +1,8 @@
-import { Pages } from "../../types"
-import PageNotFound from "../../pages/PageNotFound"
-import MyLab from "../../pages/MyLab"
-import Bootcamp from "../../pages/Bootcamp"
-import Signin from "../../pages/auth/Signin"
+import { Pages } from "../types"
+import PageNotFound from "../pages/PageNotFound"
+import MyLab from "../pages/MyLab"
+import Bootcamp from "../pages/Bootcamp"
+import Signin from "../pages/auth/Signin"
 
 const pages: Pages = {
   ROOT: {

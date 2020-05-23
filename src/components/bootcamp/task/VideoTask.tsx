@@ -4,7 +4,7 @@ import ReactPlayer from "react-player"
 
 import { createStyles, makeStyles } from "../../material/styles"
 
-import config from "../../../utility/config"
+import config from "../../../config"
 
 const useStyels = makeStyles(() =>
   createStyles({
