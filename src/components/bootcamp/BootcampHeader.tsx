@@ -5,7 +5,7 @@ import { makeStyles, createStyles } from "../material/styles"
 import { FAIcon, Bars, Moon, Sun } from "../material/icons"
 import { ITask } from "../../types"
 import { connect, ConnectedProps } from "react-redux"
-import { toggleDarkMode } from "../../redux/actions/preferencesActions"
+import { toggleDarkMode } from "../../redux/preferences/preferencesActions"
 import { AppState } from "../../redux/configStore"
 
 const useStyles = makeStyles((theme) =>

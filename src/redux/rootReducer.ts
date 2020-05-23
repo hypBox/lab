@@ -1,5 +1,5 @@
 import { combineReducers } from "redux"
-import preferencesReducer from "./preferencesReducer"
+import preferencesReducer from "./preferences/preferencesReducer"
 
 const rootReducer = combineReducers({
   preferences: preferencesReducer,

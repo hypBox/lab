@@ -1,4 +1,4 @@
-import { PreferencesActions, actions } from "../actions/preferencesActions"
+import { PreferencesActions, actions } from "./preferencesActions"
 
 export interface PreferencesState {
   darkMode: boolean

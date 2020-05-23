@@ -1,5 +1,5 @@
 import { createStore, Store } from "redux"
-import rootReducer from "./reducers"
+import rootReducer from "./rootReducer"
 
 export interface AppState {
   preferences: {
