@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react"
 import { Avatar } from "./material/core"
-import config from "../utility/config"
+import config from "../config"
 
 export interface LogoProps {
   className?: string | undefined

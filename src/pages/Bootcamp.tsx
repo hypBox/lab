@@ -6,7 +6,7 @@ import ProgressSidebar from "../components/bootcamp/progressSidebar"
 import { bootcampData } from "../api"
 import { ITask, IMilestone } from "../types"
 import Task from "../components/bootcamp/task"
-import BootcampHeader from "../components/bootcamp/BootcampHeader"
+import Header from "../components/Header"
 const useStyles = makeStyles((theme) => ({
   main: {
     backgroundColor: theme.palette.background.default,
@@ -52,7 +52,7 @@ const Bootcamp = () => {
     <>
       <Grid container className={classes.main} direction="row">
         <Grid {...size} item className={classes.content}>
-          <BootcampHeader onButtonClick={clickHandler} task={selectedTask} />
+          <Header onButtonClick={clickHandler} title={selectedTask.title} />
           <Task task={selectedTask} />
         </Grid>
 

@@ -1,4 +1,4 @@
-import { Constants } from "./../../types"
+import { Constants } from "../types"
 import pages from "./routes"
 import app from "./app"
 

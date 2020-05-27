@@ -2,7 +2,7 @@
 
 exports[`Video Task Component renders as expected 1`] = `
 <div
-  className="makeStyles-playerWrapper-1"
+  class="makeStyles-playerWrapper-1"
 >
   <div />
 </div>
