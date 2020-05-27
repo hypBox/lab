@@ -94,6 +94,11 @@
       "\\.(css|less)$": "<rootDir>/src/utils/assetsTransformer.js"
     },
     "coverageThreshold": {
+      "patch": {
+        "default": {
+          "enabled": "no"
+        }
+      },
       "global": {
         "branches": 80,
         "functions": 80,
