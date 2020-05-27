@@ -1,8 +1,7 @@
 import React from "react"
-import renderer from "react-test-renderer"
+//import { render } from "@testing-library/react" // ISSUE 32 - fails with this but not with line 4
 import VideoTask, { VideoTaskProps } from "./VideoTask"
-
-const completedHandler = jest.fn()
+import renderer from "react-test-renderer"
 
 jest.mock("react-player", () => {
   const ReactPlayer = (props: any) => {
@@ -13,7 +12,7 @@ jest.mock("react-player", () => {
 })
 
 const props: VideoTaskProps = {
-  onCompleted: completedHandler,
+  onProgress: jest.fn(),
   task: {
     id: "t1",
     title: "Bootcamp Overview",
@@ -24,14 +23,12 @@ const props: VideoTaskProps = {
   },
 }
 
+// const renderComponent = () => render(<VideoTask {...props} />)
+
 describe("Video Task Component", () => {
   it("renders as expected", () => {
-    const root = renderer.create(<VideoTask {...props} />).toJSON()
-    expect(root).toMatchSnapshot()
-  })
-
-  it("should call onCompleted callback when video completed", () => {
-    renderer.create(<VideoTask {...props} />)
-    expect(completedHandler).toBeCalled()
+    //const tree = renderComponent()
+    const tree = renderer.create(<VideoTask {...props} />).toJSON()
+    expect(tree).toMatchSnapshot()
   })
 })

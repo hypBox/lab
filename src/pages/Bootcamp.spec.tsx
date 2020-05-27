@@ -1,24 +1,33 @@
 import React from "react"
-import renderer from "react-test-renderer"
 import { render, fireEvent } from "@testing-library/react"
+import { Provider as ReduxProvider } from "react-redux"
+import configStore from "../redux/configStore"
 
 import Bootcamp from "./Bootcamp"
-import ProgressSidebar from "../components/bootcamp/progressSidebar"
 
 describe("Bootcamp", () => {
+  const renderBootcampPage = () => {
+    const store = configStore()
+    return render(
+      <ReduxProvider store={store}>
+        <Bootcamp />
+      </ReduxProvider>
+    )
+  }
+
   it("renders as expected", () => {
-    const tree = renderer.create(<Bootcamp />).toJSON()
+    const tree = renderBootcampPage()
     expect(tree).toMatchSnapshot()
   })
 
   it("verifies progressSidebar is shown", () => {
-    const { root: instance } = renderer.create(<Bootcamp />)
-    const sidebar = instance.findByType(ProgressSidebar)
+    const tree = renderBootcampPage()
+    const sidebar = tree.findByTestId("progress-sidebar")
     expect(sidebar).toBeTruthy()
   })
 
   it("hides progressSidebar", async (done) => {
-    const { queryByTestId, getByRole } = render(<Bootcamp />)
+    const { queryByTestId, getByRole } = renderBootcampPage()
     const button = getByRole("toggle-progress-sidebar")
     fireEvent.click(button)
     const progressSidebar = await queryByTestId("progress-sidebar")
