@@ -21,13 +21,19 @@ describe("Header", () => {
     expect(tree.queryByText("Sign out")).toBeFalsy()
   })
 
-  it("should display current user menu when menu is clicked on", () => {
+  it("should toggle current user menu when menu is clicked twice", () => {
     const tree = renderHeader()
     const userMenuButton = tree.getByLabelText("current-user")
     fireEvent.click(userMenuButton)
     expect(tree.queryByText("My Lab")).toBeTruthy()
     expect(tree.queryByText("Profile")).toBeTruthy()
     expect(tree.queryByText("Sign out")).toBeTruthy()
+
+    //click again and hide the menu
+    fireEvent.click(userMenuButton)
+    expect(tree.queryByText("My Lab")).toBeFalsy()
+    expect(tree.queryByText("Profile")).toBeFalsy()
+    expect(tree.queryByText("Sign out")).toBeFalsy()
   })
 
   it("should display light theme by default", () => {
