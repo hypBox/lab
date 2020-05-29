@@ -12,7 +12,7 @@ import {
 } from "./material/core"
 import { makeStyles, createStyles } from "./material/styles"
 import { FAIcon, User, Bars, Moon, Sun } from "./material/icons"
-import { connect, ConnectedProps } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import { toggleDarkMode } from "../redux/preferences/preferencesActions"
 import { AppState } from "../redux/configStore"
 
@@ -35,31 +35,15 @@ export interface BootcampHeaderProps {
   onButtonClick?: CallableFunction
 }
 
-const mapState = (state: AppState) => {
-  const {
-    preferences: { darkMode },
-  } = state
-  return {
-    darkMode,
-  }
-}
-const mapDispatch = (dispatch: any) => {
-  return {
-    toggleDarkMode: () => dispatch(toggleDarkMode()),
-  }
-}
-
-const connector = connect(mapState, mapDispatch)
-type PropsFromRedux = ConnectedProps<typeof connector>
-type Props = BootcampHeaderProps & PropsFromRedux
-
-const Header: FC<Props> = ({
+const Header: FC<BootcampHeaderProps> = ({
   title = config.app.title,
   onButtonClick = () => {},
-  darkMode,
-  toggleDarkMode,
 }) => {
   const classes = useStyles()
+  const dispatchToggleDarkMode = useDispatch()
+  const darkMode = useSelector<AppState>(
+    ({ preferences: { darkMode } }) => darkMode
+  )
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
@@ -105,25 +89,16 @@ const Header: FC<Props> = ({
             open={open}
             onClose={handleClose}
           >
-            <MenuItem aria-label="my-lab" onClick={handleClose}>
-              My Lab
-            </MenuItem>
-            <MenuItem aria-label="profile" onClick={handleClose}>
-              Profile
-            </MenuItem>
-            <MenuItem aria-label="sign-out" onClick={handleClose}>
-              Sign out
-            </MenuItem>
+            <MenuItem onClick={handleClose}>My Lab</MenuItem>
+            <MenuItem onClick={handleClose}>Profile</MenuItem>
+            <MenuItem onClick={handleClose}>Sign out</MenuItem>
           </Menu>
         </div>
 
         <Button
           color="default"
-          // aria-label={`enable-${!darkMode ? "dark" : "light"}-theme`}
           data-testid={`enable-${!darkMode ? "dark" : "light"}-theme`}
-          onClick={() => {
-            toggleDarkMode()
-          }}
+          onClick={() => dispatchToggleDarkMode(toggleDarkMode())}
         >
           <FAIcon size={"lg"} icon={darkMode ? Sun : Moon} />
         </Button>
@@ -139,4 +114,4 @@ const Header: FC<Props> = ({
   )
 }
 
-export default connector(Header)
+export default Header
