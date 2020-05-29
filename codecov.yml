@@ -5,5 +5,5 @@ coverage:
 
   status:
     # do not run coverage on patch nor changes
-    patch: no
+    patch: off
     changes: no
