@@ -1,10 +1,14 @@
 import React from "react"
-import { render, fireEvent } from "@testing-library/react"
+import { render, fireEvent, cleanup } from "@testing-library/react"
 import { Provider as ReduxProvider } from "react-redux"
 import configStore from "../redux/configStore"
 import Header from "./Header"
 
 const store = configStore()
+
+afterEach(() => {
+  cleanup()
+})
 
 describe("Header", () => {
   const renderHeader = () =>
@@ -21,19 +25,13 @@ describe("Header", () => {
     expect(tree.queryByText("Sign out")).toBeFalsy()
   })
 
-  it("should toggle current user menu when menu is clicked twice", () => {
+  it("should toggle current user menu when menu is clicked twice", async () => {
     const tree = renderHeader()
     const userMenuButton = tree.getByLabelText("current-user")
     fireEvent.click(userMenuButton)
-    expect(tree.queryByText("My Lab")).toBeTruthy()
-    expect(tree.queryByText("Profile")).toBeTruthy()
-    expect(tree.queryByText("Sign out")).toBeTruthy()
-
-    //click again and hide the menu
-    fireEvent.click(userMenuButton)
-    expect(tree.queryByText("My Lab")).toBeFalsy()
-    expect(tree.queryByText("Profile")).toBeFalsy()
-    expect(tree.queryByText("Sign out")).toBeFalsy()
+    expect(tree.findByLabelText("menu-appbar")).toBeTruthy()
+    fireEvent.click(tree.getByText("My Lab"))
+    expect(tree.queryByLabelText("menu-appbar")).toBeFalsy()
   })
 
   it("should display light theme by default", () => {
