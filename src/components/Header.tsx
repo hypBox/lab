@@ -89,15 +89,9 @@ const Header: FC<BootcampHeaderProps> = ({
             open={open}
             onClose={handleClose}
           >
-            <MenuItem aria-label="my-lab" onClick={handleClose}>
-              My Lab
-            </MenuItem>
-            <MenuItem aria-label="profile" onClick={handleClose}>
-              Profile
-            </MenuItem>
-            <MenuItem aria-label="sign-out" onClick={handleClose}>
-              Sign out
-            </MenuItem>
+            <MenuItem onClick={handleClose}>My Lab</MenuItem>
+            <MenuItem onClick={handleClose}>Profile</MenuItem>
+            <MenuItem onClick={handleClose}>Sign out</MenuItem>
           </Menu>
         </div>
 
