@@ -45,10 +45,6 @@ const Header: FC<BootcampHeaderProps> = ({
     ({ preferences: { darkMode } }) => darkMode
   )
 
-  const toggleDarkModeHandler = () => {
-    dispatchToggleDarkMode(toggleDarkMode())
-  }
-
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
 
@@ -108,7 +104,7 @@ const Header: FC<BootcampHeaderProps> = ({
         <Button
           color="default"
           data-testid={`enable-${!darkMode ? "dark" : "light"}-theme`}
-          onClick={toggleDarkModeHandler}
+          onClick={() => dispatchToggleDarkMode(toggleDarkMode())}
         >
           <FAIcon size={"lg"} icon={darkMode ? Sun : Moon} />
         </Button>
