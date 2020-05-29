@@ -20,9 +20,7 @@ describe("Header", () => {
 
   it("should user menu items should not be shown by default", () => {
     const tree = renderHeader()
-    expect(tree.queryByText("My Lab")).toBeFalsy()
-    expect(tree.queryByText("Profile")).toBeFalsy()
-    expect(tree.queryByText("Sign out")).toBeFalsy()
+    expect(tree.queryByLabelText("menu-appbar")).toBeFalsy()
   })
 
   it("should toggle current user menu when menu is clicked twice", async () => {
